@@ -7,25 +7,21 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-<section class="vh-100" style="background-color: #094963;">
+<section class="vh-100" style="background-color: #d1571a;">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col col-xl-10">
         <div class="card" style="border-radius: 1rem;">
           <div class="row g-0">
             <div class="col-md-6 col-lg-5 d-none d-md-block">
-              <img src="/images/foto2.jpg"
+              <img src="/images/foto.jpg"
                 alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem; height: 650px;" />
             </div>
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
-                <form method="#">
-                  <h2 class="fw-normal mb-3 pb-3" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Registrarse</b></h2>
 
-                  <div data-mdb-input-init class="form-outline mb-4">
-                  <label class="form-label" for="email">Nombre</label>
-                    <input type="text" id="name" class="form-control form-control-md" />
-                  </div>
+                <form method="#">
+                  <h2 class="fw-normal mb-3 pb-3" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Iniciar Sesión</b></h2>
 
                   <div data-mdb-input-init class="form-outline mb-4">
                   <label class="form-label" for="email">Correo</label>
@@ -38,10 +34,10 @@
                   </div>
 
                   <div class="pt-1 mb-4">
-                    <button data-mdb-button-init data-mdb-ripple-init class="btn btn-md btn-block" style="background-color: #094963; color: white;" type="button">Registrarse</button>
+                    <button data-mdb-button-init data-mdb-ripple-init class="btn btn-md btn-block" style="background-color: #d1571a; color: white;" type="button">Iniciar Sesión</button>
                   </div>
-                  <p class="mb-5 pb-lg-2" style="color: #393f81;">Ya tienes una cuenta?</q> <a href="/login"
-                      style="color: #393f81;">Inicia Sesión</a></p>
+                  <p class="mb-5 pb-lg-2" style="color: #393f81;">Aún no tienes una cuenta?</q> <a href="/register"
+                      style="color: #393f81;">Registrate</a></p>
                 </form>
 
               </div>

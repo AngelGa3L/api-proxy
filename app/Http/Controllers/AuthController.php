@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -12,7 +13,14 @@ class AuthController extends Controller
     {
         return view('register');
     }
-
+    public function showLoginForm()
+    {
+        return view('login');
+    }
+    public function showMainViwe()
+    {
+        return view('welcome');
+    }
     public function register(Request $request)
     {
         $validated = $request->validate([
@@ -27,6 +35,23 @@ class AuthController extends Controller
             'password' => Hash::make($validated['password']),
         ]);
 
-        return redirect()->route('login'); 
+        return redirect()->route('login');
+    }
+    public function login(Request $request)
+    {
+        $credentials = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+
+            return redirect()->intended('welcome');
+        }
+
+        return back()->withErrors([
+            'email' => 'Las credenciales no son correctas',
+        ]);
     }
 }
