@@ -28,7 +28,7 @@
         <h1 style="text-align: center; color: white; margin-top: 40px;">Bienvenido</h1>
     </div>
     <div class="image-container">
-            <img style="height: 450px; margin-top: 0px;" src="images/asa.png" alt="Imagen centrada">
+            <img style="height: 450px; margin-top: 0px;" src="/images/asa.png" alt="Foto">
         </div>
     <div class="">
         
